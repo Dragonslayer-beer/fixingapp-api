@@ -27,7 +27,7 @@ router.post("/Login", async (req, res, next) => {
           //res.send(req.body.password.msg);
 
           if (req.body.password === result[0].password) {
-            res.status(201).json({
+            res.status(200).json({
               code: "done",
               message: "ເຂົາສູ້ລະບົບສຳເລັດ ",
             });
