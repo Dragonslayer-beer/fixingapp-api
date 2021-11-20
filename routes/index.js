@@ -28,7 +28,7 @@ router.post("/Login", async (req, res, next) => {
 
           if (req.body.password === result[0].password) {
             res.status(201).json({
-              code: "`done",
+              code: "done",
               message: "ເຂົາສູ້ລະບົບສຳເລັດ ",
             });
             // var zz = {code : 1, msg: "ເຂົາສູ້ລະບົບສຳເລັດ"};
@@ -40,10 +40,10 @@ router.post("/Login", async (req, res, next) => {
           }
         } else {
           console.log(err);
-          res.state(500).json({
-            code: "error",
-            message: "ບໍມີຊື່ໃນລະບົບ ",
-          });
+          // res.state(500).json({
+          //   code: "error",
+          //   message: "ບໍມີຊື່ໃນລະບົບ ",
+          // });
 
           // var err = {code : -1, msg : "ບໍມີຊື່ໃນລະບົບ"};
           // res.send(err);
