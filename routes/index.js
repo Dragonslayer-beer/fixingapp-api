@@ -5,6 +5,10 @@ var MongoClient = require("mongodb").MongoClient;
 var url =
   "mongodb+srv://laosoft_fixed:ergWFADmivyb11i5@cluster0.n9dhd.mongodb.net/test?authSource=admin&replicaSet=atlas-cca7ke-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
 
+  router.get("/", (req, res) => {
+    res.send("Hello World");
+  });
+
 router.post("/Login", async (req, res, next) => {
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
